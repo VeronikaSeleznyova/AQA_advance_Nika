@@ -1,0 +1,22 @@
+{
+  "name": "aqa_advance_nika",
+  "version": "1.0.0",
+  "description": "new project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeronikaSeleznyova/AQA_advance_Nika.git"
+  },
+  "author": "Veronika Seleznyova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeronikaSeleznyova/AQA_advance_Nika/issues"
+  },
+  "homepage": "https://github.com/VeronikaSeleznyova/AQA_advance_Nika#readme",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
