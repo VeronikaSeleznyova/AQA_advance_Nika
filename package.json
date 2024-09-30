@@ -1,6 +1,7 @@
 {
   "name": "aqa_advance_nika",
   "version": "1.0.0",
+  "type": "module",
   "description": "new project",
   "main": "index.js",
   "scripts": {
