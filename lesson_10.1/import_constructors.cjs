@@ -1,5 +1,3 @@
-// import { Book } from '../Book/book.js';
-// import { EBook } from '../EBook/ebook.js';
 const { Book } = require('../Book/book.cjs');
 const { EBook } = require('../EBook/ebook.cjs');
 

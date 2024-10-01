@@ -1,4 +1,3 @@
-//import { Book } from '../book.js';
 const { Book } = require('../Book/book.cjs');
 
 export class EBook extends Book {
