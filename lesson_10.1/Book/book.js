@@ -1,9 +1,9 @@
 export class Book {
-    constructor(name, author, year) {
-      this.name = name;
-      this.author = author;
-      this.year = year;
- }
+  constructor(name, author, year) {
+    this.name = name;
+    this.author = author;
+    this.year = year;
+  }
 
   get name() {
     return this._name;
@@ -38,13 +38,15 @@ export class Book {
     this._year = value;
   }
 
- printInfo() {
-    console.log(`The ${this.name} book was written by ${this.author} in ${this.year}`);
+  printInfo() {
+    console.log(
+      `The ${this.name} book was written by ${this.author} in ${this.year}`,
+    );
   }
 
   static findOldestBook(books) {
     return books.reduce((oldest, current) => {
       return current.year < oldest.year ? current : oldest;
     });
-}
+  }
 }

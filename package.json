@@ -1,11 +1,12 @@
 {
   "name": "aqa_advance_nika",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs", 
   "description": "new project",
   "main": "index.js",
   "scripts": {
-    "test": "test run"
+    "test": "test run",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,19 @@
   "homepage": "https://github.com/VeronikaSeleznyova/AQA_advance_Nika#readme",
   "dependencies": {
     "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
