@@ -1,18 +1,6 @@
 class UserActionsPage {
-  openSignInModal() {
-    cy.get('button.header_signin').should('be.visible').click({ force: true });
-  }
-
-  typeSignInEmail(email) {
-    cy.get('#signinEmail').should('be.visible').clear().type(email);
-  }
-
-  typeSignInPassword(password) {
-    cy.get('#signinPassword').should('be.visible').clear().type(password);
-  }
-
-  submitLogin() {
-    cy.get('button[type="button"].btn.btn-primary').click();
+  loginUser(email, password) {
+    cy.login(email, password);
   }
 
   openSettings() {

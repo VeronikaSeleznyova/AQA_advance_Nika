@@ -69,11 +69,17 @@ class RegistrationPage {
   }
 
   typePassword(password) {
-    return cy.get('#signupPassword').clear().type(password);
+    return cy
+      .get('#signupPassword')
+      .clear()
+      .type(password, { sensetive: true });
   }
 
   checkPasswordValue(expectedValue) {
-    return cy.get('#signupPassword').should('have.value', expectedValue.trim());
+    return cy
+      .get('#signupPassword')
+      .should('have.value', expectedValue.trim())
+      .and('have.value', expectedValue, { sensitive: true });
   }
 
   typeRepeatPasswordClick(repeatPassword) {
@@ -81,7 +87,10 @@ class RegistrationPage {
   }
 
   typeRepeatPassword(repeatPassword) {
-    return cy.get('#signupRepeatPassword').clear().type(repeatPassword);
+    return cy
+      .get('#signupRepeatPassword')
+      .clear()
+      .type(repeatPassword, { sensetive: true });
   }
 
   checkRepeatPasswordValue(expectedValue) {
