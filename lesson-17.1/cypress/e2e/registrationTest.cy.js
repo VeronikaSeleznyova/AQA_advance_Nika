@@ -1,5 +1,6 @@
 import RegistrationPage from './pages/registrationPage';
 import UserActionsPage from './pages/userActionsPage';
+import '../support/commands';
 
 describe('Test cases registration for new user', () => {
   beforeEach(() => {
@@ -153,16 +154,15 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.submitRegistration();
   });
 
-  after(() => {
-    UserActionsPage.openSignInModal();
-    UserActionsPage.typeSignInEmail('ver1@gmail.com');
-    UserActionsPage.typeSignInPassword('TestNika12?');
-    UserActionsPage.submitLogin();
+  describe('User login and remove account', () => {
+    after(() => {
+      UserActionsPage.loginUser('ver1@gmail.com', 'TestNika12?');
 
-    UserActionsPage.openSettings();
-    UserActionsPage.clickRemoveAccount();
-    UserActionsPage.confirmRemoveAccount();
+      UserActionsPage.openSettings();
+      UserActionsPage.clickRemoveAccount();
+      UserActionsPage.confirmRemoveAccount();
 
-    cy.log('All tests are finished!');
+      cy.log('All tests are finished!');
+    });
   });
 });
