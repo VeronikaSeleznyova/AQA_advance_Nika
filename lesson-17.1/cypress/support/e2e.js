@@ -14,7 +14,17 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands';
+//import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+// Импорт глобальных команд
+import './commands';
+
+// Пример глобальной команды
+Cypress.Commands.add('login', (email, password) => {
+  cy.visit('/signin');
+  cy.get('#signinEmail').type(email);
+  cy.get('#signinPassword').type(password);
+  cy.get('button').contains('Login').click();
+});

@@ -1,5 +1,5 @@
-import RegistrationPage from './pages/registrationPage';
-import UserActionsPage from './pages/userActionsPage';
+import RegistrationPage from '../support/pages/registrationPage';
+import UserActionsPage from '../support/pages/userActionsPage';
 import '../support/commands';
 
 describe('Test cases registration for new user', () => {
