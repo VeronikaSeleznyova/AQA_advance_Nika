@@ -37,6 +37,10 @@ class RegistrationPage {
     return cy.get('#signupLastName').should('have.value', expectedValue.trim());
   }
 
+  checkLastNameErrorMessage(message) {
+    cy.get('#signupLastName').should('include.text', message);
+  }
+
   checkNameFieldClasses(classes) {
     cy.get('#signupName')
       .should('have.class', classes[0])
@@ -64,6 +68,10 @@ class RegistrationPage {
     return cy.get('#signupEmail').should('have.value', expectedValue.trim());
   }
 
+  checkEmailErrorMessage(message) {
+    cy.get('#signupEmail').should('include.text', message);
+  }
+
   typePasswordClick(password) {
     cy.get('#signupPassword').click();
   }
@@ -82,6 +90,10 @@ class RegistrationPage {
       .and('have.value', expectedValue, { sensitive: true });
   }
 
+  checkPasswordErrorMessage(message) {
+    cy.get('#signupPassword').should('include.text', message);
+  }
+
   typeRepeatPasswordClick(repeatPassword) {
     return cy.get('#signupRepeatPassword').click();
   }
@@ -97,6 +109,9 @@ class RegistrationPage {
     return cy
       .get('#signupRepeatPassword')
       .should('have.value', expectedValue.trim());
+  }
+  checkRepeatPasswordErrorMessage(message) {
+    cy.get('#signupRepeatPassword').should('include.text', message);
   }
 
   checkLastNameFieldClasses(classes) {
