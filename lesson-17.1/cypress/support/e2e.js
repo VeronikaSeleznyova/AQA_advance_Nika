@@ -21,9 +21,8 @@
 // Импорт глобальных команд
 import './commands';
 
-Cypress.Commands.add('login', (email, password) => {
-  cy.visit('/signin');
-  cy.get('#signinEmail').type(email);
-  cy.get('#signinPassword').type(password);
-  cy.get('button').contains('Login').click();
-});
+// e2e.js
+
+import EnvUserActionsPage from './pages/envUserActionsPage';
+import { garagePage } from './pages/garagePage';
+import { expensesPage } from './pages/expensesPage';
