@@ -12,15 +12,15 @@ class ExpensesPage {
   }
 
   get totalCostInput() {
-    return cy.get('#addExpenseTotalCost'); // Локатор для поля стоимости
+    return cy.get('#addExpenseTotalCost');
   }
 
   get addButton() {
-    return cy.get('.btn.btn-primary[type="button"]'); // Локатор для кнопки "Add"
+    return cy.get('.btn.btn-primary[type="button"]');
   }
 
   get fuelExpenseTable() {
-    return cy.get('.expenses_table'); // Локатор таблицы расходов
+    return cy.get('.expenses_table');
   }
 
   clickAddExpense() {

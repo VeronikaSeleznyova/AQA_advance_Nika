@@ -7,7 +7,7 @@ describe('Garage and Expenses Tests', () => {
     EnvUserActionsPage.loginUser();
   });
 
-  it('Добавление автомобиля', () => {
+  it('Add a car', () => {
     garagePage.clickAddCar();
     garagePage.selectCarBrand('Porsche');
     garagePage.selectCarModel('911');
@@ -16,7 +16,7 @@ describe('Garage and Expenses Tests', () => {
     cy.contains('Porsche').should('exist');
   });
 
-  it('Добавление расхода на топливо', () => {
+  it('Add expenses', () => {
     expensesPage.clickAddExpense();
     expensesPage.enterMileage(200);
     expensesPage.enterLiters(200);
@@ -26,12 +26,16 @@ describe('Garage and Expenses Tests', () => {
     expensesPage.fuelExpenseTable.contains('200').should('exist');
   });
 
-  it('Удаление автомобиля', () => {
-    cy.contains('Garage').click();
-    cy.get('.icon-edit').click();
-    cy.get('.btn.btn-outline-danger').click();
-    cy.get('.btn.btn-danger').click();
+  describe('Remove a car', () => {
+    after(() => {
+      cy.contains('Garage').click();
+      cy.get('.icon-edit').click();
+      cy.get('.btn.btn-outline-danger').click();
+      cy.get('.btn.btn-danger').click();
 
-    cy.contains('Porsche').should('not.exist');
+      cy.contains('Porsche').should('not.exist');
+
+      cy.log('All tests are finished!');
+    });
   });
 });

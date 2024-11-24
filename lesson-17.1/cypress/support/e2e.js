@@ -21,7 +21,6 @@
 // Импорт глобальных команд
 import './commands';
 
-// Пример глобальной команды
 Cypress.Commands.add('login', (email, password) => {
   cy.visit('/signin');
   cy.get('#signinEmail').type(email);
