@@ -14,7 +14,15 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands';
+//import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+// Импорт глобальных команд
+import './commands';
+
+// e2e.js
+
+import EnvUserActionsPage from './pages/envUserActionsPage';
+import { garagePage } from './pages/garagePage';
+import { expensesPage } from './pages/expensesPage';

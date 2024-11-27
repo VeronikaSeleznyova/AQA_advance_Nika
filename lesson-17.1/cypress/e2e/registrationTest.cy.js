@@ -1,5 +1,5 @@
-import RegistrationPage from './pages/registrationPage';
-import UserActionsPage from './pages/userActionsPage';
+import RegistrationPage from '../support/pages/registrationPage';
+import UserActionsPage from '../support/pages/userActionsPage';
 import '../support/commands';
 
 describe('Test cases registration for new user', () => {
@@ -21,6 +21,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.typeName('VeronikaVeronikaVeronika');
     RegistrationPage.checkNameValue('VeronikaVeronikaVeronika');
     RegistrationPage.typeLastNameClick();
+    RegistrationPage.checkNameErrorMessage();
     RegistrationPage.checkNameFieldClasses([
       'ng-invalid',
       'is-invalid',
@@ -34,7 +35,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.openRegistrationModal();
     RegistrationPage.typeLastNameClick();
     RegistrationPage.typeNameClick();
-
+    RegistrationPage.checkLastNameErrorMessage();
     RegistrationPage.checkLastNameFieldClasses([
       'ng-invalid',
       'is-invalid',
@@ -46,7 +47,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.checkLastNameValue('VeronikaVeronikaVeronika');
 
     RegistrationPage.typeNameClick();
-
+    RegistrationPage.checkLastNameErrorMessage();
     RegistrationPage.checkLastNameFieldClasses([
       'ng-invalid',
       'is-invalid',
@@ -61,7 +62,7 @@ describe('Test cases registration for new user', () => {
 
     RegistrationPage.typeEmailClick();
     RegistrationPage.typeNameClick();
-
+    RegistrationPage.checkEmailErrorMessage();
     RegistrationPage.checkEmailFieldClasses([
       'ng-invalid',
       'is-invalid',
@@ -74,7 +75,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.checkEmailValue('test@');
 
     RegistrationPage.typeNameClick();
-
+    RegistrationPage.checkEmailErrorMessage();
     RegistrationPage.checkEmailFieldClasses([
       'ng-invalid',
       'is-invalid',
@@ -88,7 +89,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.openRegistrationModal();
     RegistrationPage.typePasswordClick();
     RegistrationPage.typeLastNameClick();
-
+    RegistrationPage.checkPasswordErrorMessage();
     RegistrationPage.checkPasswordFieldClasses([
       'ng-invalid',
       'ng-pristine',
@@ -100,7 +101,7 @@ describe('Test cases registration for new user', () => {
     RegistrationPage.checkPasswordValue('test');
 
     RegistrationPage.typeNameClick();
-
+    RegistrationPage.checkPasswordErrorMessage();
     RegistrationPage.checkPasswordFieldClasses([
       'ng-invalid',
       'ng-dirty',
@@ -114,6 +115,7 @@ describe('Test cases registration for new user', () => {
 
     RegistrationPage.typeRepeatPasswordClick();
     RegistrationPage.typeLastNameClick();
+    RegistrationPage.checkRepeatPasswordErrorMessage();
     RegistrationPage.checkRepeatPasswordFieldClasses([
       'ng-invalid',
       'ng-touched',
@@ -125,7 +127,7 @@ describe('Test cases registration for new user', () => {
 
     RegistrationPage.typeRepeatPassword('TestNika12');
     RegistrationPage.checkRepeatPasswordValue('TestNika12');
-
+    RegistrationPage.checkRepeatPasswordErrorMessage();
     RegistrationPage.checkRepeatPasswordFieldClasses([
       'ng-touched',
       'ng-invalid',
