@@ -1,9 +1,9 @@
 {
-  "name": "lesson_22.1",
+  "name": "lesson_23",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+"scripts": {
     "test:playwright": "playwright test"
   },
   "keywords": [],
@@ -11,6 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.49.0",
-    "@types/node": "^22.9.3"
+    "@types/node": "^22.10.1"
   }
 }
