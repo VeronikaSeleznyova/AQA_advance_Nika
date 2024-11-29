@@ -1,6 +1,6 @@
-import { expensesPage } from '../support/pages/expensesPage';
-import { garagePage } from '../support/pages/garagePage';
-import EnvUserActionsPage from '../support/pages/envUserActionsPage';
+import { expensesPage } from '../e2e/pages/expensesPage';
+import { garagePage } from '../e2e/pages/garagePage';
+import EnvUserActionsPage from '../e2e/pages/envUserActionsPage';
 
 describe('Garage and Expenses Tests', () => {
   beforeEach(() => {
