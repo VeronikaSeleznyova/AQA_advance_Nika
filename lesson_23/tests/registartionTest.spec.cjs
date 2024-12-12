@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { RegistrationPage } = require('../pageObject/registrationPage.cjs'); 
 const { LoginPage } = require('../pageObject/loginPage.cjs'); 
-const { UserActionsPage } = require('../pageObject/userAcionsPage.cjs'); 
+const { UserActionsPage } = require('../pageObject/userActionsPage.cjs'); 
 
 
 test.describe('Test cases for new user registration', () => {

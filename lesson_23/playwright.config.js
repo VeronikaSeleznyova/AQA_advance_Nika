@@ -1,5 +1,16 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+require('dotenv').config();
+
+const config = {
+  use: {
+    baseURL: process.env.BASE_URL,
+    httpCredentials: {
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+    },
+  },
+};
 
 /**
  * Read environment variables from file.
@@ -76,3 +87,5 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+module.exports = config;
