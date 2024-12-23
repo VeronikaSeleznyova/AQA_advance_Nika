@@ -2,16 +2,6 @@
 const { defineConfig, devices } = require('@playwright/test');
 require('dotenv').config();
 
-const config = {
-  use: {
-    baseURL: process.env.BASE_URL,
-    httpCredentials: {
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD,
-    },
-  },
-};
-
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -35,7 +25,9 @@ module.exports = defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    baseURL: process.env.BASE_URL,
+    username: process.env.USERNAME,
+    password: process.env.PASSWORD,
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -87,5 +79,3 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
-module.exports = config;
